@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="UgBoard.Views.SponsorsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+   
+
+    <StackPanel Orientation="Vertical">
+        <TextBlock Grid.Row="0" Text="Sponsors" Style="{StaticResource header}"/>
+        <ItemsControl x:Name="SponsorList" VerticalAlignment="Center" >
+            <ItemsControl.Template>
+                <ControlTemplate>
+                    <WrapPanel  Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" 
+                    FlowDirection="LeftToRight" IsItemsHost="true">
+                    </WrapPanel>
+                </ControlTemplate>
+            </ItemsControl.Template>
+        </ItemsControl>
+    </StackPanel>
+    
+</UserControl>

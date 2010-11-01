@@ -1,0 +1,317 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:tc="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit.Extended"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib"
+                    xmlns:sw ="clr-namespace:System.Windows;assembly=PresentationFramework"
+                    xmlns:tl="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Layout.Toolkit" >
+
+    <SolidColorBrush x:Key="TweetBackgroundBrush" Color="#FF222222" />
+    
+    <Style TargetType="TextBlock"
+	       x:Key="header">
+        <Setter Property="Foreground"
+		        Value="{DynamicResource TextBrush}" />
+        <Setter Property="FontSize"
+		        Value="26" />
+        <Setter Property="FontFamily"
+		        Value="Trebuchet MS" />
+        <Setter Property="Margin"
+		        Value="10" />
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="10"
+				                  Color="AntiqueWhite"
+				                  Opacity="1"
+				                  ShadowDepth="0"
+				                  Direction="0"
+                                  />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="TextBlock"
+	       x:Key="subHeader">
+        <Setter Property="Foreground"
+		        Value="#EB4114" />
+        <Setter Property="FontSize"
+		        Value="24" />
+        <Setter Property="FontFamily"
+		        Value="Trebuchet MS" />
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="10"
+				                  Color="#68756A"
+				                  Opacity="1"
+				                  ShadowDepth="0"
+				                  Direction="0" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="TextBlock"
+	       x:Key="tweetText">
+        <Setter Property="Foreground"
+		        Value="AntiqueWhite" />
+        <Setter Property="FontSize"
+		        Value="14" />
+        <Setter Property="FontFamily"
+		        Value="Trebuchet MS" />
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="10"
+				                  Color="#68756A"
+				                  Opacity="1"
+				                  ShadowDepth="0"
+				                  Direction="0" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="TextBlock"
+	       x:Key="tweetInfoText">
+        <Setter Property="Foreground"
+		        Value="{DynamicResource DisabledForegroundBrush}" />
+        <Setter Property="FontSize"
+		        Value="10" />
+        <Setter Property="FontFamily"
+		        Value="Trebuchet MS" />
+
+        <Setter Property="Margin"
+		        Value="4" />
+    </Style>
+
+
+    <Style TargetType="TextBlock"
+	       x:Key="swagTitleText">
+        <Setter Property="Foreground"
+		        Value="AntiqueWhite" />
+        <Setter Property="FontSize"
+		        Value="30" />
+        <Setter Property="FontFamily"
+		        Value="Trebuchet MS" />
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="10"
+				                  Color="#68756A"
+				                  Opacity="1"
+				                  ShadowDepth="0"
+				                  Direction="0" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="TextBlock"
+	       x:Key="swagDescriptionText">
+        <Setter Property="Foreground"
+		        Value="AntiqueWhite" />
+        <Setter Property="FontSize"
+		        Value="20" />
+        <Setter Property="FontFamily"
+		        Value="Trebuchet MS" />
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="10"
+				                  Color="#68756A"
+				                  Opacity="1"
+				                  ShadowDepth="0"
+				                  Direction="0" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="TextBlock"
+	       x:Key="swagInfoText">
+        <Setter Property="Foreground"
+		        Value="{DynamicResource DisabledForegroundBrush}" />
+        <Setter Property="FontSize"
+		        Value="14" />
+        <Setter Property="FontFamily"
+		        Value="Trebuchet MS" />
+
+        <Setter Property="Margin"
+		        Value="4" />
+    </Style>
+
+
+    <Style TargetType="TextBlock"
+	       x:Key="raffleWinnerText">
+        <Setter Property="Foreground"
+		        Value="{DynamicResource TextBrush}" />
+        <Setter Property="FontSize"
+		        Value="300" />
+        <Setter Property="FontFamily"
+		        Value="Trebuchet MS" />
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="10"
+				                  Color="AntiqueWhite"
+				                  Opacity="1"
+				                  ShadowDepth="0"
+				                  Direction="0"
+                                  />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="TextBlock"
+	       x:Key="remainingRaffleText">
+        <Setter Property="Foreground"
+		        Value="AntiqueWhite" />
+        <Setter Property="FontSize"
+		        Value="40" />
+        <Setter Property="FontFamily"
+		        Value="Trebuchet MS" />
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="10"
+				                  Color="#68756A"
+				                  Opacity="1"
+				                  ShadowDepth="0"
+				                  Direction="0" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    
+    <ControlTemplate x:Key="busyIndicator"
+	                 TargetType="tc:BusyIndicator">
+        <Grid>
+            <sw:VisualStateManager.VisualStateGroups>
+                <sw:VisualStateGroup x:Name="VisibilityStates">
+                    <sw:VisualState x:Name="Hidden">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00"
+							                               Duration="00:00:00.001"
+							                               Storyboard.TargetProperty="(UIElement.Visibility)"
+							                               Storyboard.TargetName="busycontent">
+                                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <Visibility>Collapsed</Visibility>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00"
+							                               Duration="00:00:00.001"
+							                               Storyboard.TargetProperty="(UIElement.Visibility)"
+							                               Storyboard.TargetName="overlay">
+                                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <Visibility>Collapsed</Visibility>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </sw:VisualState>
+                    <sw:VisualState x:Name="Visible">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00"
+							                               Duration="00:00:00.001"
+							                               Storyboard.TargetProperty="(UIElement.Visibility)"
+							                               Storyboard.TargetName="busycontent">
+                                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <Visibility>Visible</Visibility>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00"
+							                               Duration="00:00:00.001"
+							                               Storyboard.TargetProperty="(UIElement.Visibility)"
+							                               Storyboard.TargetName="overlay">
+                                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <Visibility>Visible</Visibility>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </sw:VisualState>
+                </sw:VisualStateGroup>
+                <sw:VisualStateGroup x:Name="BusyStatusStates">
+                    <sw:VisualState x:Name="Idle">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00"
+							                               Duration="00:00:00.001"
+							                               Storyboard.TargetProperty="(Control.IsEnabled)"
+							                               Storyboard.TargetName="content">
+                                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <s:Boolean>True</s:Boolean>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </sw:VisualState>
+                    <sw:VisualState x:Name="Busy">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00"
+							                               Duration="00:00:00.001"
+							                               Storyboard.TargetProperty="(Control.IsEnabled)"
+							                               Storyboard.TargetName="content">
+                                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <s:Boolean>False</s:Boolean>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </sw:VisualState>
+                </sw:VisualStateGroup>
+            </sw:VisualStateManager.VisualStateGroups>
+            <ContentControl x:Name="content"
+			                ContentTemplate="{TemplateBinding ContentTemplate}"
+			                Content="{TemplateBinding Content}"
+			                HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+			                VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+            <Rectangle x:Name="overlay"
+			           Fill="Transparent"
+			           Opacity="0" />
+            <ContentPresenter x:Name="busycontent">
+                <ContentPresenter.ContentTemplate >
+                    <DataTemplate>
+                        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal"  Margin="0 16 0 0">
+                                <TextBlock Text="Loading"
+						           Foreground="White"
+						           Margin="0 0 4 0" />
+
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ContentPresenter.ContentTemplate>
+            </ContentPresenter>
+        </Grid>
+    </ControlTemplate>
+
+
+    <Style TargetType="tc:BusyIndicator">
+        <Setter Property="IsTabStop"
+		        Value="False" />
+        <Setter Property="DisplayAfter"
+		        Value="00:00:00.1" />
+        <Setter Property="HorizontalAlignment"
+		        Value="Stretch" />
+        <Setter Property="VerticalAlignment"
+		        Value="Stretch" />
+        <Setter Property="HorizontalContentAlignment"
+		        Value="Stretch" />
+        <Setter Property="VerticalContentAlignment"
+		        Value="Stretch" />
+        <Setter Property="Template"
+		        Value="{StaticResource busyIndicator}" />
+    </Style>
+
+
+    <Style x:Key="RaffleWinnerBorder" TargetType="{x:Type Border}">
+        <Setter Property="BorderBrush" Value="{StaticResource BlackBrush}" />
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="Padding" Value="4"/>
+        <Setter Property="Background" Value="{StaticResource HoverShineBrush}"/>
+    </Style>
+
+
+
+</ResourceDictionary>

@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8393BC82-210A-449D-BB6D-00E69E23D939}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UgBoard</RootNamespace>
+    <AssemblyName>UgBoard</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="StructureMap">
+      <HintPath>Lib\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Controls.Layout.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\System.Windows.Controls.Layout.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity">
+      <HintPath>Lib\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\WPFToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFToolkit.Extended">
+      <HintPath>Lib\WPFToolkit.Extended.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Framework\DefaultBusyService.cs" />
+    <Compile Include="Framework\DefaultConfigurationService.cs" />
+    <Compile Include="Framework\IBusyService.cs" />
+    <Compile Include="Framework\IConfigurationService.cs" />
+    <Compile Include="Framework\ISupportBusyIndicator.cs" />
+    <Compile Include="Framework\Results\BusyResult.cs" />
+    <Compile Include="Framework\Results\TimerResult.cs" />
+    <Compile Include="Framework\Show.cs" />
+    <Compile Include="Models\BackendUIExtrensions.cs" />
+    <Compile Include="Models\DefaultBackend.cs" />
+    <Compile Include="Models\DefaultTwitterService.cs" />
+    <Compile Include="Models\IBackend.cs" />
+    <Compile Include="Models\ICommand.cs" />
+    <Compile Include="Models\IQuery.cs" />
+    <Compile Include="Models\ITwitterService.cs" />
+    <Compile Include="Models\QueryResult.cs" />
+    <Compile Include="Models\SearchSponsors.cs" />
+    <Compile Include="Models\SearchSwag.cs" />
+    <Compile Include="Models\SearchTwitter.cs" />
+    <Compile Include="Models\SponsorSearchResult.cs" />
+    <Compile Include="Models\SwagItemResult.cs" />
+    <Compile Include="Models\TwitterSearchResult.cs" />
+    <Compile Include="ViewModels\IndividualSponsorViewModel.cs" />
+    <Compile Include="ViewModels\RaffleViewModel.cs" />
+    <Compile Include="ViewModels\RaffleWinnerViewModel.cs" />
+    <Compile Include="ViewModels\RemainingRaffleNumberViewModel.cs" />
+    <Compile Include="ViewModels\ShellViewModel.cs" />
+    <Compile Include="ViewModels\SponsorsViewModel.cs" />
+    <Compile Include="ViewModels\SwagItemViewModel.cs" />
+    <Compile Include="ViewModels\SwagViewModel.cs" />
+    <Compile Include="ViewModels\TweetViewModel.cs" />
+    <Compile Include="ViewModels\TwitterFeedViewModel.cs" />
+    <Compile Include="Views\IndividualSponsorView.xaml.cs">
+      <DependentUpon>IndividualSponsorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RaffleView.xaml.cs">
+      <DependentUpon>RaffleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RaffleWinnerView.xaml.cs">
+      <DependentUpon>RaffleWinnerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RemainingRaffleNumberView.xaml.cs">
+      <DependentUpon>RemainingRaffleNumberView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SponsorsView.xaml.cs">
+      <DependentUpon>SponsorsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SwagItemView.xaml.cs">
+      <DependentUpon>SwagItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SwagView.xaml.cs">
+      <DependentUpon>SwagView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TweetView.xaml.cs">
+      <DependentUpon>TweetView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TwitterFeedView.xaml.cs">
+      <DependentUpon>TwitterFeedView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Resources\CustomizedStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\IndividualSponsorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RaffleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RaffleWinnerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RemainingRaffleNumberView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\ShellView.xaml.cs">
+      <DependentUpon>ShellView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\SponsorsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SwagItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SwagView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TweetView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TwitterFeedView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\CaliburnMicroSource\src\Caliburn.Micro.WPF\Caliburn.Micro.WPF.csproj">
+      <Project>{B633FE8C-B40E-4122-A763-F94C8B1A70F8}</Project>
+      <Name>Caliburn.Micro.WPF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\CodePlex\LinqToTwitter-SVN\LinqToTwitter\LinqToTwitter.csproj">
+      <Project>{A214B9F0-6B8C-4E91-BE99-27F55CC860C1}</Project>
+      <Name>LinqToTwitter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="HubCityLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Refresh Grey Metallic32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Make Favorite Grey Metallic32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Settings Edit32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\OK32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\RaffleTicket.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

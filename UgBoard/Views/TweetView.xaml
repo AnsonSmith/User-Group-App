@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="UgBoard.Views.TweetView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="300" Background="{StaticResource TweetBackgroundBrush}">
+
+    <Border Style="{StaticResource TweetBorder}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Grid.Column="0" x:Name="ThumbNail" Width="50" Height="50"/>
+        <TextBlock Grid.Row="0" Style="{StaticResource tweetText}" Grid.Column="1" x:Name="TweetText" Text="See if this changesplex repo. Getting closer....." TextWrapping="Wrap"  Margin="5,10,5,5"/>
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+            <TextBlock Style="{StaticResource tweetInfoText}" x:Name="UserName"/>
+            <TextBlock Style="{StaticResource tweetInfoText}" x:Name="DateTime"/>            
+        </StackPanel>
+    </Grid>
+    </Border>
+</UserControl>

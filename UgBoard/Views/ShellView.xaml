@@ -1,0 +1,34 @@
+﻿<Window x:Class="UgBoard.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:tl="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Layout.Toolkit"  
+        Title="MainWindow" Height="600" Width="700" Background="{StaticResource WindowBackgroundBrush}">
+    <DockPanel>
+        <Grid DockPanel.Dock="Top">
+            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right" >
+                <Button Width="45" Height="45" x:Name="ScrollMode" HorizontalAlignment="Center" ToolTip="Scrolling Mode">
+                    <Button.Content>
+                        <Image Source="/Resources/Refresh Grey Metallic32.png" Height="30" Width="30"/>
+                    </Button.Content>
+                </Button>
+                
+                <Button Width="45" Height="45" x:Name="RaffleMode" HorizontalAlignment="Right" ToolTip="Raffle Mode">
+                    <Button.Content>
+                        <Image Source="/Resources/Make Favorite Grey Metallic32.png" Height="30" Width="30"/>
+                    </Button.Content>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <Border DockPanel.Dock="Right">
+            <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto">
+                <ContentControl x:Name="TwitterFeed" MaxWidth="350"/>
+            </ScrollViewer>
+        </Border>
+        <Border DockPanel.Dock="Left">
+            <Grid>
+                <tl:TransitioningContentControl x:Name="LeftColumn"  Transition="UpTransition" Loaded="LeftColumn_Loaded" />
+            </Grid>
+        </Border>
+        
+    </DockPanel>
+</Window>

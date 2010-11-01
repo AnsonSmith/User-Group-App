@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SwagItems>
+  <SwagItem>
+    <Title>Atlassian T-Shirt</Title>
+    <Description>T-Shirt with sayings like Stop, Collaborate and Listen, and You've Got Issues</Description>
+    <Company>Atlassian</Company>
+    <Qty>10</Qty>
+    <ItemValue>20.00</ItemValue>
+  </SwagItem>
+  <SwagItem>
+    <Title>JetBrains Resharper License</Title>
+    <Description>Developer Productivity Tool for Microsoft Visual Studio</Description>
+    <Company>JetBrains</Company>
+    <Qty>1</Qty>
+    <ItemValue>199.00</ItemValue>
+  </SwagItem>
+  <SwagItem>
+    <Title>Atlassian Starter License</Title>
+    <Description>Starter License for Jira (Issue Tracker), Bamboo (CI), Crucible (Code Review), GreenHopper (Project Planning) and others </Description>
+    <Company>Atlassian</Company>
+    <Qty>5</Qty>
+    <ItemValue>10.00</ItemValue>
+  </SwagItem>
+
+  <SwagItem>
+    <Title>Telerik Ultimate Collection for .NET</Title>
+    <Description>All of Teleriks Winform, WPF, Silverlight, and Asp.net controls and more!</Description>
+    <Company>Atlassian</Company>
+    <Qty>1</Qty>
+    <ItemValue>1999.00</ItemValue>
+  </SwagItem>
+ <SwagItem>
+    <Title>Programming Microsoft ASP.NET 3.5</Title>
+    <Description>An in-depth guide to the core features of Web development with ASP.NET.</Description>
+    <Company>Microsoft</Company>
+    <Qty>5</Qty>
+    <ItemValue>37.00</ItemValue>
+  </SwagItem>
+
+</SwagItems>
